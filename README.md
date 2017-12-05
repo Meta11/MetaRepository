@@ -1,3 +1,1 @@
-# metapod-repository
-
-Some random projects
+A TIC-TAC-TOE game with an AI using the minimax algorithm.
