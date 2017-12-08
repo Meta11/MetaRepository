@@ -42,10 +42,12 @@ char Board::getBoard(int i, int j) const {
 void Board::setBoard(int i, int j, char& currentPlayer) {
 	if (boardArray[i][j] == ' ')
 		boardArray[i][j] = currentPlayer;
-	else if(boardArray[i][j] != ' ' && currentPlayer == ' ')
+	else if(boardArray[i][j] != ' ' && currentPlayer == ' ') {
+		isTie = false;
 		boardArray[i][j] = currentPlayer;
+	}
 	else {
-		std::cout << "Coordenada no válida, vuelve a introducirla" << std::endl;
+		std::cout << "Coordenada no vÃ¡lida, vuelve a introducirla" << std::endl;
 		if (currentPlayer == 'X')
 			currentPlayer = 'O';
 		else
